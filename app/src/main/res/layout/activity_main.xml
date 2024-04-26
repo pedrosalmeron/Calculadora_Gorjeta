@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32sp"
+        android:text="Calculadora de Gorjeta"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTotalMesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="Total da conta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalMesa">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiTotalMesa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:hint="Ex: 100.00"
+            android:inputType="numberDecimal"
+            android:maxLength="6" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvEscolhaGorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha a gorjeta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376" />
+
+    <RadioGroup
+        android:id="@+id/rgPorcentagemGorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.443">
+
+        <RadioButton
+            android:id="@+id/rb_gorjeta1"
+            style="@style/RadioButtonCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25sp"
+            android:text="  10%"
+            android:textStyle="italic" />
+
+        <RadioButton
+            android:id="@+id/rb_gorjeta2"
+            style="@style/RadioButtonCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25sp"
+            android:text="  15%"
+            android:textStyle="italic" />
+
+        <RadioButton
+            android:id="@+id/rb_gorjeta3"
+            style="@style/RadioButtonCustomStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  20%"
+            android:textStyle="italic" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dividir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSubtrairPessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:clickable="true"
+        android:src="@drawable/subtract"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdicionarPessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:clickable="true"
+        android:src="@drawable/add"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <TextView
+        android:id="@+id/tvNumeroPessoas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624" />
+
+    <TextView
+        android:id="@+id/description_total_por_pessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total por pessoa"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76" />
+
+    <TextView
+        android:id="@+id/tvTotalPorPessoaComGorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36.8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.838"
+        tools:text="R$ 50.45" />
+
+
+    <TextView
+        android:id="@+id/tv_conta_por_pessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959"
+        tools:text="R$ 50.00" />
+
+    <TextView
+        android:id="@+id/description_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.914" />
+
+    <TextView
+        android:id="@+id/description_gorjeta_por_pessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gorjeta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.914" />
+
+    <TextView
+        android:id="@+id/tv_gorjeta_por_pessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959"
+        tools:text="R$ 0.45" />
+
+
+    // fazer footer para a parte da activity que está expondo o resultado
+    // escolher paleta de fundo do layout e mudar cor do footer e drawables dos radio buttons, se
+    necessário
+    // verificar aprimoramentos de layout possíveis
+    // inserir drawables de caracterização da calculadora de tips, do Icon 8
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+    <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Calculadora_Gorjeta" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:checkedButton">@color/color_btn_on</item>
+        <item name="colorPrimary">@color/color_btn_off</item>
+
+    </style>
+
+    <style name="Theme.Calculadora_Gorjeta" parent="Base.Theme.Calculadora_Gorjeta" />
+</resources>
