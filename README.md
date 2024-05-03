@@ -7,7 +7,6 @@ Este projeto é um aplicativo nativo Android desenvolvido com a linguagem de pro
 
 ## Tecnologias
 - Actvity
-- Intent
 - Snackbar
 - ViewGroups
   - LinearLayout
